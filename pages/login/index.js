@@ -3,12 +3,28 @@ import TextField from "@mui/material/TextField";
 import Image from "next/image"
 import logo from '../../assets/Instagram.jpeg'
 import Button from "@mui/material/Button";
-import CloudUploadIcon from "@mui/icons-material/CloudUpload";
-import IconButton from "@mui/material/IconButton";
 import Link from 'next/link'
-function index() {
-  return (
-    <div className="login-container">
+import { Carousel } from 'react-responsive-carousel';
+function index()
+{
+return (
+  <div className="login-container">
+    <div className="insta-mob-bg">
+      <div className="carousel">
+        <Carousel
+          autoPlay
+          interval={2000}
+          infiniteLoop
+          showArrows={false}
+          showThumbs={false}
+          showIndicators={false}
+          stopOnHover
+          showStatus={false}
+        >
+        </Carousel>
+      </div>
+    </div>
+    <div>
       <div className="login-card">
         <Image src={logo} />
         <TextField
@@ -28,8 +44,7 @@ function index() {
           margin="dense"
           type="password"
         />
-        
-       <span style={{ color: "blueviolet" }}> Forget Password ?</span>
+           <span style={{ color: "blueviolet" }}>Forget Password</span>
 
         <Button
           style={{ marginTop: "1rem" }}
@@ -37,17 +52,18 @@ function index() {
           component="label"
           fullWidth
         >
-          Login
+          Log in
         </Button>
       </div>
       <div className="bottom-card">
         Don't Have an account ?{" "}
-        <Link href='/login'>
-          <span style={{ color: "blueviolet" }}>Sign up</span>
+        <Link href="/signup">
+          <span style={{ color: "blueviolet" }}>Signup</span>
         </Link>
       </div>
     </div>
-  );
+  </div>
+);
 }
 
-export default index
+export default index;
