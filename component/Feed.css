@@ -1,0 +1,96 @@
+.feed-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.navbar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.nav-icons{
+    margin:0.5rem;
+    color: black;
+} 
+
+.nav-icons-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and(max-width:500px)
+{
+    .nav-icons{
+        display: none;
+    }
+}
+
+
+.upload-btn{
+    margin-top: 1rem;
+}
+
+.video-container{
+    height: 70vh;
+    border-radius: 15px;
+    scrollbar-width: 0;
+    overflow-y: scroll;
+}
+
+.video-container::-webkit-scrollbar{
+    display:none;
+}
+
+.post-container{
+    height: 100%;
+    width: 20rem;
+    margin-bottom: 0.6rem;
+}
+
+
+.post-container>video{
+    height: 100%;
+    width:20rem;
+    object-fit: contain;
+    background-color: lightpink;
+    border-radius: 15px;
+    position: relative;
+}
+
+
+.video-info{
+    position: absolute;
+    width: 20rem;
+    display: flex;
+    justify-content: space-around;
+    bottom: 105px;
+    z-index: 1;
+
+}
+
+.avatar-container{
+    display: flex;
+    justify-content: flex-start;
+    width: 70%;
+}
+
+.avatar-container>p{
+    margin-left: 0.2rem;
+}
+
+.post-like{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+
